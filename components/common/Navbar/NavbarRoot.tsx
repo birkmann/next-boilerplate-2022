@@ -1,30 +1,36 @@
-import { FC, useState, useEffect } from 'react'
-import throttle from 'lodash.throttle'
+import { FC, useEffect } from 'react'
 import cn from 'classnames'
-import s from './Navbar.module.scss'
+import { useScrollDirection } from '../../../hooks/useScrollDirection'
 
 const NavbarRoot: FC = ({ children }) => {
-  const [hasScrolled, setHasScrolled] = useState(false)
+  const { isScrollingUp } = useScrollDirection()
+
+  let scrolledHeader = false
+
+  if (typeof window !== 'undefined') {
+    scrolledHeader = window.scrollY > 150
+  }
 
   useEffect(() => {
-    const handleScroll = throttle(() => {
-      const offset = 0
-      const { scrollTop } = document.documentElement
-      const scrolled = scrollTop > offset
-
-      if (hasScrolled !== scrolled) {
-        setHasScrolled(scrolled)
-      }
-    }, 200)
-
-    document.addEventListener('scroll', handleScroll)
-    return () => {
-      document.removeEventListener('scroll', handleScroll)
+    if (scrolledHeader) {
+      document.body.classList.add('has-navbar')
+    } else {
+      document.body.classList.remove('has-navbar')
     }
-  }, [hasScrolled])
+  }, [scrolledHeader])
 
   return (
-    <div className={cn(s.root, { 'page--scrolled': hasScrolled })}>
+    <div
+      className={cn(
+        'bg-white border-b transition-transform sticky top-0',
+        {
+          '-translate-y-full': scrolledHeader,
+        },
+        {
+          'translate-y-0': isScrollingUp,
+        }
+      )}
+    >
       {children}
     </div>
   )
