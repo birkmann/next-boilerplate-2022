@@ -17,24 +17,24 @@ const Home: NextPage = () => {
           src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1589,c_limit/ff82af3e-3e1a-41a3-b1eb-7712136effb1/nike-official-site.jpg"
           className="w-full"
         />
-        <div className="text-center my-8">
+        <div className="my-8 text-center">
           <p className="mb-2">
             Der Nike Pegasus 38 Shield: Dein Arbeitstier mit Flügeln für
             Regentage.
           </p>
-          <h4 className="text-5xl uppercase mb-8 font-headline">
+          <h4 className="mb-8 text-5xl uppercase font-headline">
             Bleib warm. Bleib trocken. Bleib schnell.
           </h4>
           <a
             href="/"
-            className="bg-black text-white px-8 py-2 rounded-full font-semibold hover:bg-gray-800"
+            className="py-2 font-semibold text-white bg-black rounded-full px-7 hover:bg-gray-800"
           >
             Kaufen
           </a>
         </div>
-        <div className="my-16">
+        <div className="my-20">
           <h2 className="text-2xl">Die richtige Ausrüstung</h2>
-          <div className="flex gap-4 overflow-x-scroll my-8">
+          <div className="flex gap-4 my-8 overflow-x-scroll">
             <img
               src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_525,c_limit/eaad3abc-94cb-442a-8a22-9b006153eb80/react-miler-2-shield-wetterfester-strassenlaufschuh-fur-WnSDPL.png"
               alt=""

@@ -1,4 +1,5 @@
 import { Container, Logo } from '@components/ui'
+import { Searchbar } from '@components/common/'
 import Link from 'next/link'
 import NavbarRoot from './NavbarRoot'
 
@@ -22,18 +23,21 @@ const Navbar = () => {
       <Container>
         <div className="flex items-center">
           <Link href="/">
-            <a className="inline-block" aria-label="Logo">
+            <a className="z-10 inline-block mr-auto" aria-label="Logo">
               <Logo />
             </a>
           </Link>
-          <nav className="hidden mx-auto space-x-5 text-lg lg:block">
-            <NavLink href="/">Neuheiten</NavLink>
-            <NavLink href="">Herren</NavLink>
-            <NavLink href="">Damen</NavLink>
-            <NavLink href="">Kinder</NavLink>
-            <NavLink href="">Bis zu 50 % Rabatt</NavLink>
-            <NavLink href="">Kollektion</NavLink>
-          </nav>
+          <div className="absolute left-0 right-0 w-full">
+            <nav className="hidden mx-auto space-x-5 text-lg text-center lg:block w-[calc(100%-680px)]">
+              <NavLink href="/">Neuheiten</NavLink>
+              <NavLink href="/">Herren</NavLink>
+              <NavLink href="/">Damen</NavLink>
+              <NavLink href="/">Kinder</NavLink>
+              <NavLink href="/">Bis zu 50 % Rabatt</NavLink>
+              <NavLink href="/">Kollektion</NavLink>
+            </nav>
+          </div>
+          <Searchbar />
         </div>
       </Container>
       <div className="flex items-center justify-center text-sm bg-gray-100 h-14">
