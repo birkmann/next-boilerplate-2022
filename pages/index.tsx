@@ -4,6 +4,7 @@ import { Container } from '@components/ui'
 import Navbar from '../components/common/Navbar/Navbar'
 import Image from 'next/image'
 import Button from '@components/ui/Button'
+import Footer from '@components/common/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -114,6 +115,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </Container>
+      <Footer />
     </div>
   )
 }
