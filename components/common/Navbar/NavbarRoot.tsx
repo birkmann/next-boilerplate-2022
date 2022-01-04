@@ -22,7 +22,7 @@ const NavbarRoot: FC = ({ children }) => {
   return (
     <div
       className={cn(
-        'bg-white border-b transition-transform sticky top-0',
+        'bg-white border-b transition-transform sticky top-0 delay-100 duration-500',
         {
           '-translate-y-full': scrolledHeader,
         },

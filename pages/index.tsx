@@ -17,12 +17,12 @@ const Home: NextPage = () => {
           src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1589,c_limit/ff82af3e-3e1a-41a3-b1eb-7712136effb1/nike-official-site.jpg"
           className="w-full"
         />
-        <div className="my-8 text-center">
+        <div className="my-8 lg:text-center">
           <p className="mb-2">
             Der Nike Pegasus 38 Shield: Dein Arbeitstier mit Flügeln für
             Regentage.
           </p>
-          <h4 className="mb-8 text-5xl uppercase font-headline">
+          <h4 className="mb-8 text-4xl uppercase lg:text-5xl font-headline">
             Bleib warm. Bleib trocken. Bleib schnell.
           </h4>
           <a
@@ -33,24 +33,72 @@ const Home: NextPage = () => {
           </a>
         </div>
         <div className="my-20">
-          <h2 className="text-2xl">Die richtige Ausrüstung</h2>
-          <div className="flex gap-4 my-8 overflow-x-scroll">
-            <img
-              src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_525,c_limit/eaad3abc-94cb-442a-8a22-9b006153eb80/react-miler-2-shield-wetterfester-strassenlaufschuh-fur-WnSDPL.png"
-              alt=""
-            />
-            <img
-              src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_525,c_limit/ed177def-b551-43a8-95fa-40353d8fb84f/pegasus-trail-3-gore-tex-wasserfester-trail-laufschuh-fur-herren-FngTl6.png"
-              alt=""
-            />
-            <img
-              src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_591,c_limit/a05f509e-8d66-411e-9ba1-38b64f8bd559/air-zoom-pegasus-38-shield-wetterfester-strassenlaufschuh-fur-herren-BKgmbZ.png"
-              alt=""
-            />
-            <img
-              src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_591,c_limit/aaf5068f-f45c-4492-898b-100b463107ed/air-zoom-pegasus-37-shield-herren-laufschuh-nf5kSS.png"
-              alt=""
-            />
+          <h2 className="mb-8 text-2xl">Die richtige Ausrüstung</h2>
+          <div className="flex gap-4 overflow-x-scroll flex-nowrap ">
+            <div className="flex-none w-3/4 lg:w-1/3">
+              <img
+                src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_525,c_limit/eaad3abc-94cb-442a-8a22-9b006153eb80/react-miler-2-shield-wetterfester-strassenlaufschuh-fur-WnSDPL.png"
+                alt=""
+                className="w-full"
+              />
+              <div className="justify-between mt-4 mb-16 lg:flex">
+                <div>
+                  <h4>Nike React Miler 2 Shield</h4>
+                  <p className="text-gray-500">
+                    Wetterfester Straßenlaufschuh für Damen
+                  </p>
+                </div>
+                <p className="mr-4 whitespace-nowrap">139,99 €</p>
+              </div>
+            </div>
+            <div className="flex-none w-3/4 lg:w-1/3">
+              <img
+                src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_525,c_limit/ed177def-b551-43a8-95fa-40353d8fb84f/pegasus-trail-3-gore-tex-wasserfester-trail-laufschuh-fur-herren-FngTl6.png"
+                alt=""
+                className="w-full"
+              />
+              <div className="justify-between mt-4 mb-16 lg:flex">
+                <div>
+                  <h4>Nike Pegasus Trail 3 GORE-TEX</h4>
+                  <p className="text-gray-500">
+                    Wasserfester Trail-Laufschuh für Herren
+                  </p>
+                </div>
+                <p className="mr-4 whitespace-nowrap">149,99 €</p>
+              </div>
+            </div>
+            <div className="flex-none w-3/4 lg:w-1/3">
+              <img
+                src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_591,c_limit/a05f509e-8d66-411e-9ba1-38b64f8bd559/air-zoom-pegasus-38-shield-wetterfester-strassenlaufschuh-fur-herren-BKgmbZ.png"
+                alt=""
+                className="w-full"
+              />
+              <div className="justify-between mt-4 mb-16 lg:flex">
+                <div>
+                  <h4>Nike React Miler 2 Shield</h4>
+                  <p className="text-gray-500">
+                    Wetterfester Straßenlaufschuh für Damen
+                  </p>
+                </div>
+                <p className="mr-4 whitespace-nowrap">139,99 €</p>
+              </div>
+            </div>
+            <div className="flex-none w-3/4 lg:w-1/3">
+              <img
+                src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_591,c_limit/aaf5068f-f45c-4492-898b-100b463107ed/air-zoom-pegasus-37-shield-herren-laufschuh-nf5kSS.png"
+                alt=""
+                className="w-full"
+              />
+              <div className="justify-between mt-4 mb-16 lg:flex">
+                <div>
+                  <h4>Nike Pegasus Trail 3 GORE-TEX</h4>
+                  <p className="text-gray-500">
+                    Wetterfester Straßenlaufschuh für Damen
+                  </p>
+                </div>
+                <p className="mr-4 whitespace-nowrap">149,99 €</p>
+              </div>
+            </div>
           </div>
         </div>
       </Container>
