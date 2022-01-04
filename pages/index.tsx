@@ -2,8 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Container } from '@components/ui'
 import Navbar from '../components/common/Navbar/Navbar'
-import Link from 'next/link'
 import Image from 'next/image'
+import Button from '@components/ui/Button'
 
 const Home: NextPage = () => {
   return (
@@ -29,11 +29,16 @@ const Home: NextPage = () => {
           <h1 className="mb-8 text-4xl uppercase lg:text-5xl font-headline">
             Bleib warm. Bleib trocken. Bleib schnell.
           </h1>
-          <Link href="/">
-            <a className="py-2 font-semibold text-white bg-black rounded-full px-7 hover:bg-gray-800">
+          <div className="flex justify-center space-x-2">
+            <Button
+              href="/test"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="primary"
+            >
               Kaufen
-            </a>
-          </Link>
+            </Button>
+          </div>
         </div>
         <div className="my-20">
           <h2 className="mb-8 text-2xl">Die richtige Ausrüstung</h2>
