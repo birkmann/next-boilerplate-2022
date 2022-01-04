@@ -39,10 +39,11 @@ const Home: NextPage = () => {
           <h2 className="mb-8 text-2xl">Die richtige Ausrüstung</h2>
           <div className="flex gap-4 overflow-x-scroll flex-nowrap hover:scrollbar-thumb-gray-900 scrollbar-thin">
             <div className="flex-none w-3/4 lg:w-1/3">
-              <img
+              <Image
                 src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_525,c_limit/eaad3abc-94cb-442a-8a22-9b006153eb80/react-miler-2-shield-wetterfester-strassenlaufschuh-fur-WnSDPL.png"
-                alt=""
-                className="w-full"
+                alt="Nike"
+                width={591}
+                height={591}
               />
               <div className="justify-between mt-4 mb-16 lg:flex">
                 <div>
