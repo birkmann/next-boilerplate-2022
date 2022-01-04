@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Container } from '@components/ui'
 import Navbar from '../components/common/Navbar/Navbar'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
@@ -14,9 +15,11 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <Container>
-        <img
+        <Image
           src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_1589,c_limit/ff82af3e-3e1a-41a3-b1eb-7712136effb1/nike-official-site.jpg"
-          className="w-full"
+          alt="Nike"
+          width={1589}
+          height={838}
         />
         <div className="my-8 lg:text-center">
           <p className="mb-2">
@@ -52,10 +55,11 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="flex-none w-3/4 lg:w-1/3">
-              <img
+              <Image
                 src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_525,c_limit/ed177def-b551-43a8-95fa-40353d8fb84f/pegasus-trail-3-gore-tex-wasserfester-trail-laufschuh-fur-herren-FngTl6.png"
-                alt=""
-                className="w-full"
+                alt="Nike"
+                width={591}
+                height={591}
               />
               <div className="justify-between mt-4 mb-16 lg:flex">
                 <div>
@@ -68,10 +72,11 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="flex-none w-3/4 lg:w-1/3">
-              <img
+              <Image
                 src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_591,c_limit/a05f509e-8d66-411e-9ba1-38b64f8bd559/air-zoom-pegasus-38-shield-wetterfester-strassenlaufschuh-fur-herren-BKgmbZ.png"
-                alt=""
-                className="w-full"
+                alt="Nike"
+                width={591}
+                height={591}
               />
               <div className="justify-between mt-4 mb-16 lg:flex">
                 <div>
@@ -84,10 +89,11 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="flex-none w-3/4 lg:w-1/3">
-              <img
+              <Image
                 src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.0/w_591,c_limit/aaf5068f-f45c-4492-898b-100b463107ed/air-zoom-pegasus-37-shield-herren-laufschuh-nf5kSS.png"
-                alt=""
-                className="w-full"
+                alt="Nike"
+                width={591}
+                height={591}
               />
               <div className="justify-between mt-4 mb-16 lg:flex">
                 <div>
