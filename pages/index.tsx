@@ -26,9 +26,9 @@ const Home: NextPage = () => {
             Der Nike Pegasus 38 Shield: Dein Arbeitstier mit Flügeln für
             Regentage.
           </p>
-          <h4 className="mb-8 text-4xl uppercase lg:text-5xl font-headline">
+          <h1 className="mb-8 text-4xl uppercase lg:text-5xl font-headline">
             Bleib warm. Bleib trocken. Bleib schnell.
-          </h4>
+          </h1>
           <Link href="/">
             <a className="py-2 font-semibold text-white bg-black rounded-full px-7 hover:bg-gray-800">
               Kaufen
