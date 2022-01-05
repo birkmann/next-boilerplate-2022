@@ -38,14 +38,15 @@ const MobileMenu = () => {
         'left-0',
         'right-0',
         'bottom-0',
-        'overflow-auto'
+        'overflow-auto',
+        'lg:relative'
       )
   }
   return (
     <>
       <div
         className={cn(
-          'fixed top-0 bottom-0 left-0 right-0 z-10 h-screen bg-black transition-all ease-in-out duration-300 lg:hidden',
+          'fixed top-0 bottom-0 left-0 right-0 z-40 h-screen bg-black transition-all ease-in-out duration-300 lg:hidden',
           { 'opacity-75 visible': MobileMenuContext.isOpen },
           { 'opacity-0 hidden': MobileMenuContext.isOpen === false }
         )}

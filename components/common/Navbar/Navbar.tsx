@@ -2,7 +2,6 @@ import { Container, Logo } from '@components/ui'
 import { Searchbar } from '@components/common/'
 import Link from 'next/link'
 import NavbarRoot from './NavbarRoot'
-import MobileMenu from '../MobileMenu'
 import { useMobileMenuContext } from '@context/MobileMenu.context'
 
 export type NavLinkProps = {
@@ -35,7 +34,8 @@ const Navbar = () => {
         'left-0',
         'right-0',
         'bottom-0',
-        'overflow-auto'
+        'overflow-auto',
+        'lg:relative'
       )
   }
   return (
@@ -92,7 +92,6 @@ const Navbar = () => {
               <Logo />
             </a>
           </Link>
-          <MobileMenu />
           <div className="absolute left-0 right-0 w-full">
             <nav className="hidden mx-auto text-center lg:block w-[calc(100%-640px)]">
               <NavLink href="/">Neuheiten</NavLink>
