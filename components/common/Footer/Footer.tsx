@@ -10,9 +10,7 @@ export type FooterLinkProps = {
 const FooterLink = ({ href, children }: FooterLinkProps) => {
   return (
     <Link href={href}>
-      <a className="text-xs font-light text-gray-400 hover:text-gray-200">
-        {children}
-      </a>
+      <a className="text-gray-400 hover:text-gray-200">{children}</a>
     </Link>
   )
 }
@@ -20,7 +18,7 @@ const FooterLink = ({ href, children }: FooterLinkProps) => {
 const FooterLinkHeadline = ({ href, children }: FooterLinkProps) => {
   return (
     <Link href={href}>
-      <a className="font-light uppercase font-headline">{children}</a>
+      <a className="uppercase font-headline">{children}</a>
     </Link>
   )
 }
