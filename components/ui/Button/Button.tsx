@@ -44,20 +44,22 @@ const Button = (props: ButtonProps): JSX.Element | null => {
     ...rest
   } = props
 
+  const classesCombined = cn(
+    classes.base,
+    classes.variant[variant!],
+    classes.fontSize[fontSize!],
+    classes.width[width!]
+  )
+
   if (href) {
     return (
       <Link href={href}>
         <a
           {...rest}
           target={target}
-          onClick={() => onClick && onClick()}
           rel={rel}
-          className={cn(
-            classes.base,
-            classes.variant[variant!],
-            classes.fontSize[fontSize!],
-            classes.width[width!]
-          )}
+          onClick={() => onClick && onClick()}
+          className={classesCombined}
         >
           {children}
         </a>
@@ -67,14 +69,9 @@ const Button = (props: ButtonProps): JSX.Element | null => {
 
   return (
     <button
-      onClick={() => onClick && onClick()}
       {...rest}
-      className={cn(
-        classes.base,
-        classes.variant[variant!],
-        classes.fontSize[fontSize!],
-        classes.width[width!]
-      )}
+      onClick={() => onClick && onClick()}
+      className={classesCombined}
     >
       {children}
     </button>
