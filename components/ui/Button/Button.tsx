@@ -3,14 +3,14 @@ import Link from 'next/link'
 import cn from 'classnames'
 
 interface ButtonProps {
-  children: React.ReactNode
-  href?: string
-  target?: string
-  rel?: string
-  onClick?: () => void
   variant?: 'primary' | 'secondary'
   fontSize?: 'sm' | 'md' | 'lg'
   width?: 'default' | 'full'
+  href?: string
+  target?: '_blank' | '_self' | '_parent' | '_top'
+  rel?: string
+  children: React.ReactNode
+  onClick?: () => void
 }
 
 const classes = {
