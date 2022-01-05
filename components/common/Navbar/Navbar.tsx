@@ -2,6 +2,7 @@ import { Container, Logo } from '@components/ui'
 import { Searchbar } from '@components/common/'
 import Link from 'next/link'
 import NavbarRoot from './NavbarRoot'
+import MobileMenu from '../MobileMenu'
 
 export type NavLinkProps = {
   href: string
@@ -73,6 +74,7 @@ const Navbar = () => {
               <Logo />
             </a>
           </Link>
+          <MobileMenu />
           <div className="absolute left-0 right-0 w-full">
             <nav className="hidden mx-auto text-center lg:block w-[calc(100%-640px)]">
               <NavLink href="/">Neuheiten</NavLink>
