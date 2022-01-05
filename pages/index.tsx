@@ -21,6 +21,7 @@ const Home: NextPage = () => {
           alt="Nike"
           width={1589}
           height={838}
+          layout="responsive"
         />
         <div className="my-8 lg:text-center">
           <p className="mb-2">
