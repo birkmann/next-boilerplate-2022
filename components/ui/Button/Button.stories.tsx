@@ -1,6 +1,6 @@
 import Button from './Button'
 
-export default {
+const Props = {
   title: 'Button',
   component: Button,
 }
@@ -8,3 +8,5 @@ export default {
 const Template = (args: any) => <Button {...args}>Button Text</Button>
 
 export const DefaultButton = Template.bind({})
+
+export default Props
