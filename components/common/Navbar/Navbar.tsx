@@ -3,6 +3,7 @@ import { Searchbar } from '@components/common/'
 import Link from 'next/link'
 import NavbarRoot from './NavbarRoot'
 import MobileMenu from '../MobileMenu'
+import { useMobileMenuContext } from '@context/MobileMenu.context'
 
 export type NavLinkProps = {
   href: string
@@ -20,6 +21,23 @@ const NavLink = ({ href, children }: NavLinkProps) => {
 }
 
 const Navbar = () => {
+  const [MobileMenuContext, setMobileMenuState] = useMobileMenuContext()
+  const openMobileMenu = () => {
+    setMobileMenuState({
+      ...MobileMenuContext,
+      isOpen: true,
+    })
+    document
+      .querySelector('body')!
+      .classList.add(
+        'fixed',
+        'top-0',
+        'left-0',
+        'right-0',
+        'bottom-0',
+        'overflow-auto'
+      )
+  }
   return (
     <NavbarRoot>
       <div className="hidden bg-gray-100 lg:block">
@@ -110,6 +128,9 @@ const Navbar = () => {
               <button
                 className="p-2 rounded-full hover:bg-gray-200"
                 aria-label="Menu"
+                onClick={() => {
+                  openMobileMenu()
+                }}
               >
                 <svg width="24px" height="24px" fill="#111" viewBox="0 0 24 24">
                   <path d="M21 13H3c-.6 0-1-.4-1-1s.4-1 1-1h18c.6 0 1 .4 1 1s-.4 1-1 1zm0-8H3c-.6 0-1-.4-1-1s.4-1 1-1h18c.6 0 1 .4 1 1s-.4 1-1 1zm0 16H3c-.6 0-1-.4-1-1s.4-1 1-1h18c.6 0 1 .4 1 1s-.4 1-1 1z"></path>

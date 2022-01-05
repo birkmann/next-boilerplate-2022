@@ -1,6 +1,8 @@
 import Button from '@components/ui/Button'
 import Link from 'next/link'
 import React from 'react'
+import { useMobileMenuContext } from '@context/MobileMenu.context'
+import cn from 'classnames'
 
 export type NavLinkProps = {
   href: string
@@ -21,17 +23,43 @@ const NavLink = ({ href, children }: NavLinkProps) => {
 }
 
 const MobileMenu = () => {
+  const [MobileMenuContext, setMobileMenuState] = useMobileMenuContext()
+  const closeMobileMenu = () => {
+    setMobileMenuState({
+      ...MobileMenuContext,
+      isOpen: false,
+    })
+
+    document
+      .querySelector('body')!
+      .classList.remove(
+        'fixed',
+        'top-0',
+        'left-0',
+        'right-0',
+        'bottom-0',
+        'overflow-auto'
+      )
+  }
   return (
-    <div className="absolute top-0 right-0 z-50 w-[320px] h-screen bg-white lg:hidden translate-y-full">
-      <div className="px-10 overflow-y-scroll">
-        <div className="flex justify-end pt-4 -mr-4">
-          <Link href="#">
-            <a className="p-2 rounded-full hover:bg-gray-200 ">
-              <svg className="w-7 h-7" fill="#111" viewBox="-6 -6 26 26">
-                <path d="M12.12.36L7 5.48 1.88.36.44 1.88 5.48 7 .44 12.12l1.44 1.44L7 8.52l5.12 5.04 1.52-1.44L8.52 7l5.12-5.12z"></path>
-              </svg>
-            </a>
-          </Link>
+    <div
+      className={cn(
+        'absolute top-0 right-0 z-50 w-[320px] h-screen bg-white lg:hidden translate-x-full transition-transform duration-300 ease-in-out',
+        { 'translate-x-0': MobileMenuContext.isOpen }
+      )}
+    >
+      <div className="h-full px-8 overflow-y-scroll">
+        <div className="flex justify-end pt-2 -mr-4">
+          <div
+            className="p-2 rounded-full hover:bg-gray-200"
+            onClick={() => {
+              closeMobileMenu()
+            }}
+          >
+            <svg className="w-7 h-7" fill="#111" viewBox="-6 -6 26 26">
+              <path d="M12.12.36L7 5.48 1.88.36.44 1.88 5.48 7 .44 12.12l1.44 1.44L7 8.52l5.12 5.04 1.52-1.44L8.52 7l5.12-5.12z"></path>
+            </svg>
+          </div>
         </div>
         <div className="flex flex-col mt-2">
           <NavLink href="/">Neuheiten</NavLink>
@@ -71,7 +99,7 @@ const MobileMenu = () => {
           </Link>
         </p>
         <div className="my-16 space-y-4">
-          <Button variant="secondary">Sei dabei</Button>
+          <Button variant="primary">Sei dabei</Button>
           <Button variant="secondary">Anmelden</Button>
         </div>
       </div>
