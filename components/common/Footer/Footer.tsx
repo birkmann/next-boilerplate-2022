@@ -10,6 +10,16 @@ export type FooterLinkProps = {
 const FooterLink = ({ href, children }: FooterLinkProps) => {
   return (
     <Link href={href}>
+      <a className="text-xs font-light text-gray-400 hover:text-gray-200">
+        {children}
+      </a>
+    </Link>
+  )
+}
+
+const FooterLinkHeadline = ({ href, children }: FooterLinkProps) => {
+  return (
+    <Link href={href}>
       <a className="font-light uppercase font-headline">{children}</a>
     </Link>
   )
@@ -20,30 +30,81 @@ const Footer = () => {
     <div className="py-8 text-sm text-white bg-black">
       <Container>
         <div className="grid gap-4 lg:grid-cols-12">
-          <div className="lg:col-span-9">
-            <ul className="space-y-3">
-              <li>
-                <FooterLink href="#">Geschenkgutscheine</FooterLink>
-              </li>
-              <li>
-                <FooterLink href="#">Store suchen</FooterLink>
-              </li>
-              <li>
-                <FooterLink href="#">Für E-Mails registrieren</FooterLink>
-              </li>
-              <li>
-                <FooterLink href="#">Member werden</FooterLink>
-              </li>
-              <li>
-                <FooterLink href="#">Studentenrabatt</FooterLink>
-              </li>
-              <li>
-                <FooterLink href="#">Feedback</FooterLink>
-              </li>
-            </ul>
+          <div className="grid gap-8 lg:col-span-9 lg:grid-cols-4">
+            <div>
+              <ul className="space-y-3">
+                <li>
+                  <FooterLinkHeadline href="#">
+                    Geschenkgutscheine
+                  </FooterLinkHeadline>
+                </li>
+                <li>
+                  <FooterLinkHeadline href="#">Store suchen</FooterLinkHeadline>
+                </li>
+                <li>
+                  <FooterLinkHeadline href="#">
+                    Für E-Mails registrieren
+                  </FooterLinkHeadline>
+                </li>
+                <li>
+                  <FooterLinkHeadline href="#">
+                    Member werden
+                  </FooterLinkHeadline>
+                </li>
+                <li>
+                  <FooterLinkHeadline href="#">
+                    Studentenrabatt
+                  </FooterLinkHeadline>
+                </li>
+                <li>
+                  <FooterLinkHeadline href="#">Feedback</FooterLinkHeadline>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <FooterLinkHeadline href="#">Hilfe</FooterLinkHeadline>
+
+              <ul className="hidden mt-2 space-y-2 lg:block">
+                <li>
+                  <FooterLink href="#">Bestellstatus</FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="#">Versand und Lieferung</FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="#">Rückgabe</FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="#">Zahlungsoptionen</FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="#">Kontakt</FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="#">Nike Aktionscodes – Hilfe</FooterLink>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <FooterLinkHeadline href="#">Über Nike</FooterLinkHeadline>
+              <ul className="hidden mt-2 space-y-2 lg:block">
+                <li>
+                  <FooterLink href="#">Neuigkeiten</FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="#">Karriere</FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="#">Investoren</FooterLink>
+                </li>
+                <li>
+                  <FooterLink href="#">Nachhaltigkeit</FooterLink>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="lg:col-span-3">
-            <div className="flex justify-end space-x-3">
+            <div className="flex mt-4 space-x-3 lg:justify-end lg:mt-0">
               <Link href="/">
                 <a
                   target="_blank"

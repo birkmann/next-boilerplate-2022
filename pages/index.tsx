@@ -31,7 +31,7 @@ const Home: NextPage = () => {
           <h1 className="mb-8 text-4xl font-black uppercase lg:text-5xl font-headline">
             Bleib warm. Bleib trocken. Bleib schnell.
           </h1>
-          <div className="flex justify-center space-x-2">
+          <div className="justify-center space-x-2 lg:flex">
             <Button
               href="/test"
               target="_blank"

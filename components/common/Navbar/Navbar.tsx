@@ -50,7 +50,7 @@ const Navbar = () => {
                 </a>
               </Link>
             </div>
-            <div className="flex items-center ml-auto space-x-3 text-sm">
+            <div className="flex items-center ml-auto space-x-3 text-xs">
               <Link href="#">
                 <a className="hover:text-gray-500">Hilfe</a>
               </Link>
@@ -74,7 +74,7 @@ const Navbar = () => {
             </a>
           </Link>
           <div className="absolute left-0 right-0 w-full">
-            <nav className="hidden mx-auto text-lg text-center lg:block w-[calc(100%-640px)]">
+            <nav className="hidden mx-auto text-center lg:block w-[calc(100%-640px)]">
               <NavLink href="/">Neuheiten</NavLink>
               <NavLink href="/">Herren</NavLink>
               <NavLink href="/">Damen</NavLink>
@@ -117,8 +117,8 @@ const Navbar = () => {
           </div>
         </div>
       </Container>
-      <div className="text-sm bg-gray-100">
-        <p className="p-3 leading-relaxed text-center">
+      <div className="hidden text-sm bg-gray-100 lg:block">
+        <p className="p-3 text-sm leading-relaxed text-center">
           Als Member profitierst du von kostenlosem Versand und 60 Tage
           kostenloser Rücksendung. &nbsp;
           <Link href="#">
