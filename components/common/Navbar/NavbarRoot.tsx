@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import cn from 'classnames'
 import { useScrollDirection } from '../../../hooks/useScrollDirection'
 
@@ -10,14 +10,6 @@ const NavbarRoot: FC = ({ children }) => {
   if (typeof window !== 'undefined') {
     scrolledHeader = window.scrollY > 150
   }
-
-  useEffect(() => {
-    if (scrolledHeader) {
-      document.body.classList.add('has-navbar')
-    } else {
-      document.body.classList.remove('has-navbar')
-    }
-  }, [scrolledHeader])
 
   return (
     <div
