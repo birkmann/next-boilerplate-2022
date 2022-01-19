@@ -3,7 +3,7 @@ import Link from 'next/link'
 import cn from 'classnames'
 
 interface ButtonProps {
-  variant?: 'primary' | 'secondary'
+  variant?: 'primary' | 'primaryLight' | 'outline'
   fontSize?: 'sm' | 'md' | 'lg'
   width?: 'default' | 'full'
   href?: string
@@ -17,7 +17,8 @@ const classes = {
   base: 'py-2 rounded-full px-7 border inline-block text-center',
   variant: {
     primary: 'text-white bg-black hover:bg-gray-900 border-black',
-    secondary:
+    primaryLight: 'text-black bg-white hover:opacity-75 border-white',
+    outline:
       'text-gray-900 bg-transparent hover:border-gray-400 border-gray-300',
   },
   fontSize: {

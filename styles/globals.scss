@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+.image-cover {
+  position: relative;
+  & > span {
+    height: 100% !important;
+    width: 100% !important;
+  }
+  img {
+    object-fit: cover;
+  }
+}
+
+.slider {
+  --carousel-padding: 1rem;
+  padding-inline-start: var(--carousel-padding);
+  scroll-padding: 0 var(--carousel-padding);
+  -webkit-margin-start: 0;
+  margin-inline-start: 0;
+  -webkit-margin-end: 0;
+  margin-inline-end: 0;
+  @media screen and (min-width: 1024px) {
+    --carousel-padding: 0rem;
+  }
+}
