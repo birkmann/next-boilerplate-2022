@@ -113,7 +113,7 @@ const MobileMenu = () => {
           <div className="mt-16 mb-32 space-y-4">
             <Button variant="primary">Sei dabei</Button>
             <br />
-            <Button variant="secondary">Anmelden</Button>
+            <Button variant="primaryLight">Anmelden</Button>
           </div>
         </div>
       </div>
