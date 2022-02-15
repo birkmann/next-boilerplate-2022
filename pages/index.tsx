@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         />
         <div className="my-8 lg:text-center">
           <p className="mb-2">Progress Starts Here</p>
-          <h1 className="max-w-2xl mx-auto mb-8 text-4xl font-black uppercase lg:text-7xl font-headline ">
+          <h1 className="max-w-2xl mb-8 text-4xl font-black uppercase lg:mx-auto lg:text-7xl font-headline ">
             Progress passiert in deinem Tempo
           </h1>
           <div className="justify-center space-x-2 lg:flex">
